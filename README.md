@@ -1,7 +1,10 @@
 # Multiline-Dropdown-Select
 
-### Framework: AngularJS (1.5) 
-### Design: Material design 
+### Framework: 
+AngularJS (1.5) 
+
+### Design: 
+Material design 
 
 ### Drop-down Component: 
 1. Shows 3 formatted lines when closed. 
