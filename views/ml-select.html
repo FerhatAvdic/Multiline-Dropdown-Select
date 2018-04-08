@@ -1,0 +1,32 @@
+
+<div class="ml-selected-item ml-select-item--height" ng-if="!vm.selectedAcc" ng-click="vm.selectOpen = !vm.selectOpen" ng-class="{'ml-select-active': vm.selectOpen}">Select Account <i ng-class="(vm.selectOpen)? 'fa-chevron-up' : 'fa-chevron-down'" class="fa chevron-color" aria-hidden="true"></i>
+</div>
+<div class="ml-selected-item" ng-if="vm.selectedAcc" ng-click="vm.selectOpen = !vm.selectOpen" ng-class="{'ml-select-active': vm.selectOpen}"> 
+  <div class="ml-selected-item-flex">
+    <div class="ml-select-item--account">
+      {{vm.selectedAcc.type}} - {{vm.selectedAcc.issuer}}
+    </div>
+    <div class="ml-select-item--number">
+      {{vm.selectedAcc.number}}
+    </div>
+    <div class="ml-select-item--balance">
+      GBP {{vm.selectedAcc.balance}}
+    </div>
+  </div>
+  <div class="ml-selected-item-flex">
+    <i ng-class="(vm.selectOpen)? 'fa-chevron-up' : 'fa-chevron-down'" class="fa chevron-color" aria-hidden="true"></i>
+  </div>
+</div>
+<ul class="ml-select" ng-if="vm.selectOpen">
+  <li class="ml-select-item"  ng-click="vm.selectAccount(acc)" ng-repeat="acc in vm.accounts">
+    <div class="ml-select-item--account">
+      {{acc.type}} - {{acc.issuer}}
+    </div>
+    <div class="ml-select-item--number">
+       {{acc.number}}
+    </div>
+    <div class="ml-select-item--balance">
+      GBP {{acc.balance}}
+    </div>
+  </li>
+</ul>
